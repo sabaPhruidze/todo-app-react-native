@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
@@ -21,6 +22,7 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
+      <StatusBar style="light" />
       <Header />
       <View style={styles.content}>
         <AddTodo submitHandler={submitHandler} />
