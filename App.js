@@ -12,6 +12,7 @@ import {
 import Header from "./components/Header";
 import TodoItem from "./components/TodoItem";
 import AddTodo from "./components/AddTodo";
+import SandBox from "./components/SandBox";
 export default function App() {
   const [todos, setTodos] = useState([
     { text: "buy coffee", key: 1 },
@@ -38,27 +39,28 @@ export default function App() {
     }
   };
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-      }}
-    >
-      <View style={styles.container}>
-        <StatusBar style="light" />
-        <Header />
-        <View style={styles.content}>
-          <AddTodo submitHandler={submitHandler} />
-          <View style={styles.list}>
-            <FlatList
-              data={todos}
-              renderItem={({ item }) => (
-                <TodoItem item={item} pressHandler={pressHandler} />
-              )}
-            />
-          </View>
-        </View>
-      </View>
-    </TouchableWithoutFeedback>
+    // <TouchableWithoutFeedback
+    //   onPress={() => {
+    //     Keyboard.dismiss();
+    //   }}
+    // >
+    //   <View style={styles.container}>
+    //     <StatusBar style="light" />
+    //     <Header />
+    //     <View style={styles.content}>
+    //       <AddTodo submitHandler={submitHandler} />
+    //       <View style={styles.list}>
+    //         <FlatList
+    //           data={todos}
+    //           renderItem={({ item }) => (
+    //             <TodoItem item={item} pressHandler={pressHandler} />
+    //           )}
+    //         />
+    //       </View>
+    //     </View>
+    //   </View>
+    // </TouchableWithoutFeedback>
+    <SandBox />
   );
 }
 
