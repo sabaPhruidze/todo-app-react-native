@@ -39,28 +39,28 @@ export default function App() {
     }
   };
   return (
-    // <TouchableWithoutFeedback
-    //   onPress={() => {
-    //     Keyboard.dismiss();
-    //   }}
-    // >
-    //   <View style={styles.container}>
-    //     <StatusBar style="light" />
-    //     <Header />
-    //     <View style={styles.content}>
-    //       <AddTodo submitHandler={submitHandler} />
-    //       <View style={styles.list}>
-    //         <FlatList
-    //           data={todos}
-    //           renderItem={({ item }) => (
-    //             <TodoItem item={item} pressHandler={pressHandler} />
-    //           )}
-    //         />
-    //       </View>
-    //     </View>
-    //   </View>
-    // </TouchableWithoutFeedback>
-    <SandBox />
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
+      <View style={styles.container}>
+        <StatusBar style="light" />
+        <Header />
+        <View style={styles.content}>
+          <AddTodo submitHandler={submitHandler} />
+          <View style={styles.list}>
+            <FlatList
+              data={todos}
+              renderItem={({ item }) => (
+                <TodoItem item={item} pressHandler={pressHandler} />
+              )}
+            />
+          </View>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
+    // <SandBox />
   );
 }
 
